@@ -9,10 +9,16 @@ Functional Interface is also known as Single Abstract Method Interfaces or SAM I
 
 
 @FunctionalInterface  
+
 interface sayable{  
+
     void say(String msg);   
+    
 }  
-public class FunctionalInterfaceExample implements sayable{  
+
+
+public class FunctionalInterfaceExample implements sayable{
+
 
     public void say(String msg){  
     
@@ -25,6 +31,7 @@ public class FunctionalInterfaceExample implements sayable{
         fie.say("Hello there");  
         
     }  
+    
 }  
 
 
