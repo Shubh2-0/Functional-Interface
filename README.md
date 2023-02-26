@@ -13,7 +13,6 @@ interface sayable{
     void say(String msg);  
     
 }  
-
 public class FunctionalInterfaceExample implements sayable{  
 
     public void say(String msg){  
@@ -30,7 +29,6 @@ public class FunctionalInterfaceExample implements sayable{
         fie.say("Hello there");  
         
     }  
-    
 }  
 
 
