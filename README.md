@@ -1,41 +1,57 @@
-# Functional-Interface
+<div align="center">
 
-An Interface that contains exactly one abstract method is known as functional interface. It can have any number of default, static methods but can contain only one abstract method. It can also declare methods of object class.
+# ⚡ Functional Interface
 
-Functional Interface is also known as Single Abstract Method Interfaces or SAM Interfaces. It is a new feature in Java, which helps to achieve functional programming approach.
+[![GitHub stars](https://img.shields.io/github/stars/Shubh2-0/Functional-Interface?style=for-the-badge&logo=github&color=yellow)](https://github.com/Shubh2-0/Functional-Interface/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Shubh2-0/Functional-Interface?style=for-the-badge&logo=github&color=blue)](https://github.com/Shubh2-0/Functional-Interface/network/members)
 
-# Example 
+### Single Abstract Method Interfaces
 
+*Foundation for lambda expressions in Java*
 
+</div>
 
-@FunctionalInterface  
+---
 
-interface sayable{  
+## 🎯 About
 
-    void say(String msg);   
-    
-}  
+A **Functional Interface** has exactly one abstract method. Marked with @FunctionalInterface, these are the foundation for lambda expressions in Java 8+.
 
+## 📚 Built-in Functional Interfaces
 
-public class FunctionalInterfaceExample implements sayable{
+| Interface | Method | Use Case |
+|-----------|--------|----------|
+| Consumer<T> | accept(T) | Process input, no return |
+| Supplier<T> | get() | Provide values |
+| Function<T,R> | apply(T) | Transform data |
+| Predicate<T> | test(T) | Boolean test |
+| BiFunction<T,U,R> | apply(T,U) | Two inputs |
 
+## 💻 Example
 
-    public void say(String msg){  
-    
-        System.out.println(msg);     
-    }
-    public static void main(String[] args) {  
-    
-        FunctionalInterfaceExample fie = new FunctionalInterfaceExample();  
-        
-        fie.say("Hello there");  
-        
-    }  
-    
-}  
+```java
+@FunctionalInterface
+interface Calculator {
+    int calculate(int a, int b);
+}
 
+// Lambda implementation
+Calculator add = (a, b) -> a + b;
+Calculator multiply = (a, b) -> a * b;
 
+System.out.println(add.calculate(5, 3));      // 8
+System.out.println(multiply.calculate(5, 3)); // 15
+```
 
-# Output:
+## 🛠️ Technologies
 
-Hello there
+Java 8+ | Lambda | Stream API
+
+## 📬 Contact
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shubham-bhati-787319213/)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:shubhambhati226@gmail.com)
+
+---
+
+**Keywords:** Java Functional-Interface Lambda SAM Consumer Predicate Function Supplier
